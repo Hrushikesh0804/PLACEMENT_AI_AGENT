@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodthunamm - Dashboard</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --white: #ffffff;
+            --green: #10b981;
+            --red: #ef4444;
+            --orange: #f59e0b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        /* Layout Container */
+        .dashboard-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background: var(--white);
+            border-right: 1px solid var(--gray-200);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            flex: 1;
+            padding: 16px 0;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 12px 20px;
+            color: var(--gray-600);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: var(--gray-50);
+            color: var(--primary-blue);
+        }
+
+        .nav-item.active {
+            background-color: var(--gray-50);
+            color: var(--primary-blue);
+            border-left-color: var(--light-blue);
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* User Profile Section */
+        .user-profile {
+            padding: 20px;
+            border-top: 1px solid var(--gray-200);
+            margin-top: auto;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .profile-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .profile-details h4 {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 2px;
+        }
+
+        .profile-details p {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        .settings-btn {
+            width: 100%;
+            padding: 8px 16px;
+            background-color: var(--gray-100);
+            border: none;
+            border-radius: 8px;
+            color: var(--gray-600);
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .settings-btn:hover {
+            background-color: var(--gray-200);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 110;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 32px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .main-content.expanded {
+            margin-left: 0;
+        }
+
+        .content-header {
+            margin-bottom: 32px;
+        }
+
+        .content-header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+
+        .content-header p {
+            color: var(--gray-600);
+            font-size: 16px;
+        }
+
+        /* Metric Cards Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .metric-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--gray-200);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .metric-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-icon {
+            width: 24px;
+            height: 24px;
+            stroke: var(--light-blue);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+
+        .metric-change {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .metric-change.positive {
+            color: var(--green);
+        }
+
+        .metric-change.negative {
+            color: var(--red);
+        }
+
+        .metric-change.neutral {
+            color: var(--gray-500);
+        }
+
+        /* Additional Sections Grid - Ensure visibility */
+        .additional-sections {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+            width: 100%;
+            visibility: visible;
+        }
+
+        .section-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--gray-200);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header h3 {
+            font-size: 18px;
+            font-weight: 650;
+            color: var(--gray-800);
+        }
+
+        .section-icon {
+            width: 20px;
+            height: 20px;
+            stroke: var(--light-blue);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* New Topics Styles */
+        .topic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: var(--gray-50);
+            transition: background-color 0.2s ease;
+        }
+
+        .topic-item:hover {
+            background-color: var(--gray-100);
+        }
+
+        .topic-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .topic-badge.new {
+            background-color: var(--green);
+            color: white;
+        }
+
+        .topic-badge.updated {
+            background-color: var(--orange);
+            color: white;
+        }
+
+        .topic-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topic-name {
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 14px;
+        }
+
+        .topic-progress {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+
+        /* Coming Interviews Styles */
+        .interview-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .interview-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: var(--gray-50);
+            transition: background-color 0.2s ease;
+        }
+
+        .interview-item:hover {
+            background-color: var(--gray-100);
+        }
+
+        .interview-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            background-color: var(--light-blue);
+            color: white;
+            border-radius: 8px;
+            min-width: 50px;
+        }
+
+        .date-day {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .date-month {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .interview-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .interview-company {
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 14px;
+        }
+
+        .interview-type {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin: 2px 0;
+        }
+
+        /* Company Interviews Styles */
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .company-logo.google {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+        }
+
+        .company-logo.microsoft {
+            background: linear-gradient(135deg, #00a4ef, #0078d4);
+        }
+
+        .company-logo.amazon {
+            background: linear-gradient(135deg, #ff9900, #ff6600);
+        }
+
+        .company-logo.netflix {
+            background: linear-gradient(135deg, #e50914, #b91c1c);
+        }
+
+        .interview-date-small {
+            font-size: 12px;
+            color: var(--gray-500);
+            font-weight: 500;
+            padding: 4px 8px;
+            background-color: var(--gray-100);
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+        .interview-role {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin: 2px 0;
+        }
+
+        .interview-status {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .interview-status.applied {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--light-blue);
+        }
+
+        .interview-status.interview-scheduled {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--green);
+        }
+
+        .interview-status.coding-round {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--orange);
+        }
+
+        .interview-status.pending {
+            background-color: rgba(156, 163, 175, 0.1);
+            color: var(--gray-600);
+        }
+
+        /* Mock Exams Styles */
+        .exam-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .exam-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: var(--gray-50);
+            transition: background-color 0.2s ease;
+        }
+
+        .exam-item:hover {
+            background-color: var(--gray-100);
+        }
+
+        .exam-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .exam-name {
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .exam-details {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+
+        .exam-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .exam-btn.start {
+            background-color: var(--light-blue);
+            color: white;
+        }
+
+        .exam-btn.start:hover {
+            background-color: var(--primary-blue);
+        }
+
+        .exam-btn.review {
+            background-color: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .exam-btn.review:hover {
+            background-color: var(--gray-300);
+        }
+
+        /* Achievements Styles */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .achievement-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 16px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .achievement-item.earned {
+            background-color: var(--gray-50);
+            border: 2px solid var(--light-blue);
+        }
+
+        .achievement-item.earned:hover {
+            transform: translateY(-2px);
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+
+        .achievement-item.locked {
+            background-color: var(--gray-100);
+            border: 2px solid var(--gray-200);
+            opacity: 0.6;
+        }
+
+        .achievement-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .achievement-name {
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .achievement-desc {
+            font-size: 11px;
+            color: var(--gray-500);
+            line-height: 1.3;
+        }
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        /* Leaderboard */
+        .leaderboard {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .leaderboard-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .leaderboard h3 {
+            font-size: 20px;
+            font-weight: 650;
+            color: var(--gray-800);
+        }
+
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .leaderboard-table th {
+            text-align: left;
+            padding: 12px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-600);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .leaderboard-table td {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .leaderboard-table tr:hover {
+            background-color: var(--gray-50);
+        }
+
+        .leaderboard-table tr.current-user {
+            background-color: rgba(59, 130, 246, 0.05);
+            border-left: 3px solid var(--light-blue);
+        }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .rank-badge.gold {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #8b4513;
+        }
+
+        .rank-badge.silver {
+            background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+            color: #4a4a4a;
+        }
+
+        .rank-badge.bronze {
+            background: linear-gradient(135deg, #cd7f32, #b8860b);
+            color: #ffffff;
+        }
+
+        .rank-badge.default {
+            background-color: var(--gray-100);
+            color: var(--gray-600);
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            margin-right: 12px;
+        }
+
+        /* AI Suggestions */
+        .ai-suggestions {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .ai-suggestions h3 {
+            font-size: 20px;
+            font-weight: 650;
+            color: var(--gray-800);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ai-icon {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .suggestion-list {
+            list-style: none;
+        }
+
+        .suggestion-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-100);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-bullet {
+            width: 6px;
+            height: 6px;
+            background-color: var(--light-blue);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .suggestion-text {
+            color: var(--gray-700);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Overlay for mobile */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 80px 16px 32px;
+            }
+
+            .content-header h1 {
+                font-size: 28px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .additional-sections {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .section-card {
+                padding: 20px;
+            }
+
+            .achievement-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .achievement-item {
+                padding: 12px;
+            }
+
+            .achievement-icon {
+                font-size: 20px;
+            }
+
+            .bottom-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .metric-card {
+                padding: 20px;
+            }
+
+            .leaderboard, .ai-suggestions {
+                padding: 20px;
+            }
+
+            .leaderboard-table {
+                font-size: 14px;
+            }
+
+            .leaderboard-table td {
+                padding: 12px 0;
+            }
+
+            .user-avatar {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 80px 12px 24px;
+            }
+
+            .metric-value {
+                font-size: 28px;
+            }
+
+            .content-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+        <svg class="nav-icon" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" onclick="closeSidebar()"></div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <!-- Logo/Header -->
+            <div class="sidebar-header">
+                <a href="#" class="logo">Kodthunamm</a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Mock Interview
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4m-6-4l4-4-4-4m-8 8h14"></path>
+                    </svg>
+                    Simulation Interview
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <polyline points="16,18 22,12 16,6"></polyline>
+                        <polyline points="8,6 2,12 8,18"></polyline>
+                    </svg>
+                    Coding Problems
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    AI Profile Review
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-2.885-2.544-2.885 2.544a.5.5 0 0 1-.81-.47l1.515-8.526m5.37 0-5.37-6.153L9.107 12.89m5.37 0L9.107 12.89"></path>
+                    </svg>
+                    Ranking
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    Study Resources
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10,9 9,9 8,9"></polyline>
+                    </svg>
+                    Resume Builder
+                </a>
+            </div>
+
+            <!-- User Profile Section -->
+            <div class="user-profile">
+                <div class="profile-info">
+                    <div class="profile-avatar">AS</div>
+                    <div class="profile-details">
+                        <h4>Alex Smith</h4>
+                        <p>Student</p>
+                    </div>
+                </div>
+                <button class="settings-btn">Account Settings</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="mainContent">
+            <!-- Content Header -->
+            <div class="content-header">
+                <h1>Welcome back, Alex!</h1>
+                <p>Track your progress and continue your coding journey</p>
+            </div>
+
+            <!-- Metric Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-title">Overall Score</span>
+                        <svg class="metric-icon" viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                        </svg>
+                    </div>
+                    <div class="metric-value">87%</div>
+                    <div class="metric-change positive">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                        +5% from last month
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-title">Problems Solved</span>
+                        <svg class="metric-icon" viewBox="0 0 24 24">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="metric-value">247</div>
+                    <div class="metric-change positive">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        23 new this month
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-title">Current Rank</span>
+                        <svg class="metric-icon" viewBox="0 0 24 24">
+                            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-2.885-2.544-2.885 2.544a.5.5 0 0 1-.81-.47l1.515-8.526m5.37 0-5.37-6.153L9.107 12.89m5.37 0L9.107 12.89"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">#42</div>
+                    <div class="metric-change positive">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                        +8 from last month
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Sections Grid -->
+            <div class="additional-sections" style="display: grid !important; visibility: visible !important;">
+                <!-- New Topics -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>New Topics</h3>
+                        <svg class="section-icon" viewBox="0 0 24 24">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <div class="topic-list">
+                        <div class="topic-item">
+                            <div class="topic-badge new">New</div>
+                            <div class="topic-info">
+                                <span class="topic-name">Graph Algorithms</span>
+                                <span class="topic-progress">12 problems available</span>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-badge new">New</div>
+                            <div class="topic-info">
+                                <span class="topic-name">System Design Basics</span>
+                                <span class="topic-progress">8 lessons available</span>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-badge updated">Updated</div>
+                            <div class="topic-info">
+                                <span class="topic-name">Advanced SQL</span>
+                                <span class="topic-progress">5 new problems added</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Interviews -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Company Interviews</h3>
+                        <svg class="section-icon" viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                    </div>
+                    <div class="interview-list">
+                        <div class="interview-item">
+                            <div class="company-logo google">G</div>
+                            <div class="interview-info">
+                                <span class="interview-company">Google</span>
+                                <span class="interview-role">Software Engineer Intern</span>
+                                <span class="interview-status applied">Application Submitted</span>
+                            </div>
+                            <div class="interview-date-small">Aug 15</div>
+                        </div>
+                        <div class="interview-item">
+                            <div class="company-logo microsoft">M</div>
+                            <div class="interview-info">
+                                <span class="interview-company">Microsoft</span>
+                                <span class="interview-role">Frontend Developer</span>
+                                <span class="interview-status interview-scheduled">Interview Scheduled</span>
+                            </div>
+                            <div class="interview-date-small">Aug 20</div>
+                        </div>
+                        <div class="interview-item">
+                            <div class="company-logo amazon">A</div>
+                            <div class="interview-info">
+                                <span class="interview-company">Amazon</span>
+                                <span class="interview-role">SDE I</span>
+                                <span class="interview-status coding-round">Coding Round</span>
+                            </div>
+                            <div class="interview-date-small">Aug 25</div>
+                        </div>
+                        <div class="interview-item">
+                            <div class="company-logo netflix">N</div>
+                            <div class="interview-info">
+                                <span class="interview-company">Netflix</span>
+                                <span class="interview-role">Full Stack Engineer</span>
+                                <span class="interview-status pending">Under Review</span>
+                            </div>
+                            <div class="interview-date-small">Aug 30</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mock Exams -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Mock Exams</h3>
+                        <svg class="section-icon" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <div class="exam-list">
+                        <div class="exam-item">
+                            <div class="exam-info">
+                                <span class="exam-name">Data Structures Assessment</span>
+                                <span class="exam-details">45 questions • 90 minutes</span>
+                            </div>
+                            <button class="exam-btn start">Start</button>
+                        </div>
+                        <div class="exam-item">
+                            <div class="exam-info">
+                                <span class="exam-name">Algorithm Complexity Test</span>
+                                <span class="exam-details">30 questions • 60 minutes</span>
+                            </div>
+                            <button class="exam-btn start">Start</button>
+                        </div>
+                        <div class="exam-item">
+                            <div class="exam-info">
+                                <span class="exam-name">System Design Practice</span>
+                                <span class="exam-details">Completed • Score: 85%</span>
+                            </div>
+                            <button class="exam-btn review">Review</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Achievements</h3>
+                        <svg class="section-icon" viewBox="0 0 24 24">
+                            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-2.885-2.544-2.885 2.544a.5.5 0 0 1-.81-.47l1.515-8.526m5.37 0-5.37-6.153L9.107 12.89m5.37 0L9.107 12.89"></path>
+                        </svg>
+                    </div>
+                    <div class="achievement-grid">
+                        <div class="achievement-item earned">
+                            <div class="achievement-icon">🏆</div>
+                            <span class="achievement-name">Problem Solver</span>
+                            <span class="achievement-desc">Solved 100+ problems</span>
+                        </div>
+                        <div class="achievement-item earned">
+                            <div class="achievement-icon">🔥</div>
+                            <span class="achievement-name">Streak Master</span>
+                            <span class="achievement-desc">30-day coding streak</span>
+                        </div>
+                        <div class="achievement-item earned">
+                            <div class="achievement-icon">⭐</div>
+                            <span class="achievement-name">Rising Star</span>
+                            <span class="achievement-desc">Top 50 this month</span>
+                        </div>
+                        <div class="achievement-item locked">
+                            <div class="achievement-icon">🎯</div>
+                            <span class="achievement-name">Algorithm Master</span>
+                            <span class="achievement-desc">Solve 500 problems</span>
+                        </div>
+                        <div class="achievement-item locked">
+                            <div class="achievement-icon">👑</div>
+                            <span class="achievement-name">Interview Pro</span>
+                            <span class="achievement-desc">Complete 10 mock interviews</span>
+                        </div>
+                        <div class="achievement-item locked">
+                            <div class="achievement-icon">💎</div>
+                            <span class="achievement-name">Coding Legend</span>
+                            <span class="achievement-desc">Reach top 10 globally</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- This will contain the 4 new sections in a proper grid -->
+            </div>
+
+            <!-- Bottom Row: Leaderboard and AI Suggestions -->
+            <div class="bottom-row">
+                <!-- Global Leaderboard -->
+                <div class="leaderboard">
+                    <div class="leaderboard-header">
+                        <h3>Global Leaderboard</h3>
+                    </div>
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>User</th>
+                                <th>Score</th>
+                                <th>Problems</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="rank-badge gold">1</span></td>
+                                <td>
+                                    <div class="user-avatar">MK</div>
+                                    Michael Kim
+                                </td>
+                                <td>98%</td>
+                                <td>547</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge silver">2</span></td>
+                                <td>
+                                    <div class="user-avatar">SP</div>
+                                    Sarah Parker
+                                </td>
+                                <td>96%</td>
+                                <td>523</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge bronze">3</span></td>
+                                <td>
+                                    <div class="user-avatar">DJ</div>
+                                    David Johnson
+                                </td>
+                                <td>94%</td>
+                                <td>498</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">4</span></td>
+                                <td>
+                                    <div class="user-avatar">EM</div>
+                                    Emma Martinez
+                                </td>
+                                <td>92%</td>
+                                <td>467</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">5</span></td>
+                                <td>
+                                    <div class="user-avatar">RC</div>
+                                    Ryan Chen
+                                </td>
+                                <td>91%</td>
+                                <td>445</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">6</span></td>
+                                <td>
+                                    <div class="user-avatar">LW</div>
+                                    Lisa Wong
+                                </td>
+                                <td>90%</td>
+                                <td>432</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">7</span></td>
+                                <td>
+                                    <div class="user-avatar">JB</div>
+                                    James Brown
+                                </td>
+                                <td>89%</td>
+                                <td>421</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">8</span></td>
+                                <td>
+                                    <div class="user-avatar">AP</div>
+                                    Anna Patel
+                                </td>
+                                <td>88%</td>
+                                <td>398</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">9</span></td>
+                                <td>
+                                    <div class="user-avatar">TH</div>
+                                    Tom Harris
+                                </td>
+                                <td>88%</td>
+                                <td>376</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-badge default">10</span></td>
+                                <td>
+                                    <div class="user-avatar">KL</div>
+                                    Kate Lee
+                                </td>
+                                <td>87%</td>
+                                <td>354</td>
+                            </tr>
+                            <tr class="current-user">
+                                <td><span class="rank-badge default">42</span></td>
+                                <td>
+                                    <div class="user-avatar">AS</div>
+                                    Alex Smith (You)
+                                </td>
+                                <td>87%</td>
+                                <td>247</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- AI Suggestions -->
+                <div class="ai-suggestions">
+                    <h3>
+                        <div class="ai-icon">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386z"></path>
+                            </svg>
+                        </div>
+                        AI-Suggested Practice
+                    </h3>
+                    <ul class="suggestion-list">
+                        <li class="suggestion-item">
+                            <div class="suggestion-bullet"></div>
+                            <div class="suggestion-text">
+                                Focus on dynamic programming problems to improve your algorithm optimization skills. Try solving 3-4 medium-level DP problems this week.
+                            </div>
+                        </li>
+                        <li class="suggestion-item">
+                            <div class="suggestion-bullet"></div>
+                            <div class="suggestion-text">
+                                Practice system design concepts, particularly database design and scalability patterns. This will help you in technical interviews.
+                            </div>
+                        </li>
+                        <li class="suggestion-item">
+                            <div class="suggestion-bullet"></div>
+                            <div class="suggestion-text">
+                                Review binary tree traversal algorithms. Your recent submissions show room for improvement in tree-based problem solving.
+                            </div>
+                        </li>
+                        <li class="suggestion-item">
+                            <div class="suggestion-bullet"></div>
+                            <div class="suggestion-text">
+                                Schedule a mock interview session to practice explaining your thought process clearly and efficiently.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Mobile sidebar toggle functionality
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            const mainContent = document.getElementById('mainContent');
+            
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+            
+            if (sidebar.classList.contains('open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close sidebar when clicking on navigation items (mobile)
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        closeSidebar();
+                    }
+                });
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.querySelector('.overlay');
+                
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
