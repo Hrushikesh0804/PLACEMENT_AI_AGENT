@@ -6,12 +6,13 @@ const dotenv = require('dotenv');
 // Import database connection and routes
 const connectDB = require('./config/db');
 const apiRoutes = require('./routes/api');
-const userRoutes = require('./routes/users'); // Import the new user routes
+const userRoutes = require('./routes/users');
+const mockExamRoutes = require('./routes/exams'); // <-- Full mock exam routes
 
-// Load environment variables from a .env file into process.env
+// Load environment variables
 dotenv.config();
 
-// Initialize the Express application
+// Initialize Express app
 const app = express();
 
 // --- Middleware ---
@@ -23,13 +24,17 @@ connectDB();
 
 // --- API Routes ---
 app.use('/api', apiRoutes);
-app.use('/api/users', userRoutes); // Mount the user routes
+app.use('/api/users', userRoutes);
+app.use('/api/mock-exam', mockExamRoutes); // <-- Mount mock exam routes
 
-// --- Server Port Definition ---
-const PORT = process.env.PORT || 5000;
+// --- Root Route (optional) ---
+app.get('/', (req, res) => {
+  res.send('✅ Server is up and running.');
+});
 
 // --- Start Server ---
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running in ${process.env.NODE_ENV || 'development'} mode.`);
-  console.log(`   Access it at: http://localhost:${PORT}`);
+  console.log(`🚀 Server running in ${process.env.NODE_ENV || 'development'} mode`);
+  console.log(`📡 Listening at http://localhost:${PORT}`);
 });

@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import React from 'react';
 
 // Basic styles are included here for simplicity.
@@ -20,20 +21,88 @@ const navLinkStyles = {
   marginBottom: '10px'
 };
 
+const activeLinkStyles = {
+  ...navLinkStyles,
+  backgroundColor: '#64FFDA',
+  color: '#112240'
+};
+
 const Sidebar = () => {
+  const location = useLocation();
+
   return (
     <aside style={sidebarStyles}>
       <h1 style={{ color: '#E6F1FF', textAlign: 'center' }}>Kodthunamm<span style={{color: '#64FFDA'}}>.</span></h1>
       <nav>
-        <a href="#" style={navLinkStyles}>Dashboard</a>
-        <a href="#" style={navLinkStyles}>Mock Interview</a>
-        <a href="#" style={navLinkStyles}>Attempt Simulation</a>
-        <a href="#" style={navLinkStyles}>Mock Exam</a>
-        <a href="#" style={navLinkStyles}>Coding Problems</a>
-        <a href="#" style={navLinkStyles}>AI Profile Review</a>
-        <a href="#" style={navLinkStyles}>Ranking</a>
-        <a href="#" style={navLinkStyles}>Study Resources</a>
-        <a href="#" style={navLinkStyles}>Resume Builder</a>
+        <Link 
+          to="/dashboard" 
+          style={location.pathname === '/dashboard' ? activeLinkStyles : navLinkStyles}
+        >
+          Dashboard
+        </Link>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          Mock Interview
+        </a>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          Attempt Simulation
+        </a>
+        
+        <Link 
+          to="/mock-exam" 
+          style={location.pathname === '/mock-exam' ? activeLinkStyles : navLinkStyles}
+        >
+          Mock Exam
+        </Link>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          Coding Problems
+        </a>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          AI Profile Review
+        </a>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          Ranking
+        </a>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          Study Resources
+        </a>
+        
+        <a 
+          href="#" 
+          style={navLinkStyles}
+          onClick={(e) => e.preventDefault()}
+        >
+          Resume Builder
+        </a>
       </nav>
       {/* User Profile Section would go here */}
     </aside>

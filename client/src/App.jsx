@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// Import all the page components from their new .jsx files
+// Pages
 import LandingPage from './pages/LandingPage.jsx'; 
 import LoginPage from './pages/LoginPage.jsx';
 import SignupPage from './pages/SignupPage.jsx';
 import Dashboard from './pages/Dashboard.jsx';
-
-// Import the CSS file
+import MockExam from './pages/MockExam.jsx';
+import SubjectExams from './pages/SubjectExams.jsx';
+import ExamPage from './pages/ExamPage.jsx';
+// Styles
 import './App.css'; 
 
 function App() {
@@ -15,13 +16,16 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* Set the root path to the new LandingPage */}
+          {/* Public Routes (without sidebar) */}
           <Route path="/" element={<LandingPage />} />
-          
-          {/* Keep the other routes */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          
+          {/* Protected Routes (with sidebar layout) */}
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/mock-exam" element={<MockExam />} />
+          <Route path="/mock-exam/:subjectId" element={<SubjectExams />} />
+          <Route path="/exam/:subjectId/:examId" element={<ExamPage />} />
         </Routes>
       </div>
     </Router>

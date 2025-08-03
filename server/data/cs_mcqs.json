@@ -1,0 +1,2930 @@
+[
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What does OOP stand for?",
+    "options": [
+      "Object-Oriented Programming",
+      "Out-Of-Place Programming",
+      "Ordered Object Processing",
+      "Optimal Output Procedures"
+    ],
+    "answer": "Object-Oriented Programming"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "Which of the following is a fundamental concept of OOP?",
+    "options": [
+      "Inheritance",
+      "Iteration",
+      "Recursion",
+      "Selection"
+    ],
+    "answer": "Inheritance"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is encapsulation?",
+    "options": [
+      "Hiding internal data",
+      "Data sharing",
+      "Code reusability",
+      "Polymorphism"
+    ],
+    "answer": "Hiding internal data"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is an object?",
+    "options": [
+      "A blueprint for creating instances",
+      "An instance of a class",
+      "A method",
+      "A variable"
+    ],
+    "answer": "An instance of a class"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is a class?",
+    "options": [
+      "An instance of an object",
+      "A blueprint for creating objects",
+      "A method",
+      "A variable"
+    ],
+    "answer": "A blueprint for creating objects"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is inheritance?",
+    "options": [
+      "Creating new classes from existing ones",
+      "Hiding data",
+      "Polymorphism",
+      "Encapsulation"
+    ],
+    "answer": "Creating new classes from existing ones"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Single form",
+      "Data hiding",
+      "Code reusability"
+    ],
+    "answer": "Many forms"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is a method?",
+    "options": [
+      "A function within a class",
+      "A variable",
+      "An object",
+      "A class"
+    ],
+    "answer": "A function within a class"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is abstraction?",
+    "options": [
+      "Hiding complex implementation details",
+      "Data sharing",
+      "Inheritance",
+      "Polymorphism"
+    ],
+    "answer": "Hiding complex implementation details"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "Which keyword is used to create a class in Java?",
+    "options": [
+      "class",
+      "struct",
+      "interface",
+      "function"
+    ],
+    "answer": "class"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "Which keyword is used to create an object in Java?",
+    "options": [
+      "new",
+      "create",
+      "object",
+      "instance"
+    ],
+    "answer": "new"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is a constructor?",
+    "options": [
+      "A special method used to initialize an object",
+      "A method that returns a value",
+      "A variable",
+      "A class"
+    ],
+    "answer": "A special method used to initialize an object"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is a destructor?",
+    "options": [
+      "A special method used to clean up an object",
+      "A method that returns a value",
+      "A variable",
+      "A class"
+    ],
+    "answer": "A special method used to clean up an object"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is the access modifier 'public'?",
+    "options": [
+      "Accessible from anywhere",
+      "Accessible only within the class",
+      "Accessible only within the package",
+      "Accessible only to subclasses"
+    ],
+    "answer": "Accessible from anywhere"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is the access modifier 'private'?",
+    "options": [
+      "Accessible from anywhere",
+      "Accessible only within the class",
+      "Accessible only within the package",
+      "Accessible only to subclasses"
+    ],
+    "answer": "Accessible only within the class"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is the access modifier 'protected'?",
+    "options": [
+      "Accessible from anywhere",
+      "Accessible only within the class",
+      "Accessible within the class and subclasses",
+      "Accessible only to subclasses"
+    ],
+    "answer": "Accessible within the class and subclasses"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is a static member?",
+    "options": [
+      "Belongs to the class, not the object",
+      "Belongs to the object",
+      "A method",
+      "A variable"
+    ],
+    "answer": "Belongs to the class, not the object"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is a member variable?",
+    "options": [
+      "A variable within a class",
+      "A variable outside a class",
+      "A method",
+      "A class"
+    ],
+    "answer": "A variable within a class"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is an instance variable?",
+    "options": [
+      "A variable belonging to an object",
+      "A variable belonging to a class",
+      "A method",
+      "A class"
+    ],
+    "answer": "A variable belonging to an object"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is method overriding?",
+    "options": [
+      "Redefining a method in a subclass",
+      "Redefining a method in the same class",
+      "Hiding a method",
+      "Deleting a method"
+    ],
+    "answer": "Redefining a method in a subclass"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is method overloading?",
+    "options": [
+      "Having multiple methods with the same name but different parameters",
+      "Having multiple methods with different names",
+      "Hiding a method",
+      "Deleting a method"
+    ],
+    "answer": "Having multiple methods with the same name but different parameters"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is an interface?",
+    "options": [
+      "A contract that defines methods",
+      "A class",
+      "An object",
+      "A variable"
+    ],
+    "answer": "A contract that defines methods"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is data hiding?",
+    "options": [
+      "Protecting data from direct access",
+      "Sharing data freely",
+      "Using inheritance",
+      "Using polymorphism"
+    ],
+    "answer": "Protecting data from direct access"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "easy",
+    "question": "What is code reusability?",
+    "options": [
+      "Using existing code in new contexts",
+      "Writing new code every time",
+      "Using inheritance",
+      "Using polymorphism"
+    ],
+    "answer": "Using existing code in new contexts"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is polymorphism?",
+    "options": [
+      "The ability to hide data",
+      "The ability to inherit properties",
+      "The ability to take many forms",
+      "The ability to overload operators"
+    ],
+    "answer": "The ability to take many forms"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is the purpose of an abstract class?",
+    "options": [
+      "To provide a blueprint for subclasses",
+      "To create objects directly",
+      "To define private methods",
+      "To encapsulate data"
+    ],
+    "answer": "To provide a blueprint for subclasses"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "Which access modifier restricts access to a class member only within the same class?",
+    "options": [
+      "public",
+      "protected",
+      "private",
+      "static"
+    ],
+    "answer": "private"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is inheritance?",
+    "options": [
+      "Creating new classes from existing ones",
+      "Encapsulating data within a class",
+      "Overloading methods with different parameters",
+      "Defining interfaces"
+    ],
+    "answer": "Creating new classes from existing ones"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is encapsulation?",
+    "options": [
+      "Hiding internal data and methods",
+      "Creating multiple classes",
+      "Implementing polymorphism",
+      "Using inheritance"
+    ],
+    "answer": "Hiding internal data and methods"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is an interface?",
+    "options": [
+      "A class that cannot be instantiated",
+      "A method that is called automatically",
+      "A blueprint for classes that defines methods without implementation",
+      "A type of data structure"
+    ],
+    "answer": "A blueprint for classes that defines methods without implementation"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is method overriding?",
+    "options": [
+      "Defining a method with the same name and parameters in a subclass",
+      "Defining a method with a different name in a subclass",
+      "Hiding a method in a subclass",
+      "Defining a static method"
+    ],
+    "answer": "Defining a method with the same name and parameters in a subclass"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is the difference between a class and an object?",
+    "options": [
+      "A class is an instance of an object",
+      "An object is an instance of a class",
+      "There is no difference",
+      "A class is a data type, an object is a function"
+    ],
+    "answer": "An object is an instance of a class"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is constructor?",
+    "options": [
+      "A special method used to initialize an object",
+      "A method that destroys an object",
+      "A method that returns a value",
+      "A type of variable"
+    ],
+    "answer": "A special method used to initialize an object"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is a destructor?",
+    "options": [
+      "A method used to initialize an object",
+      "A special method used to clean up resources before an object is destroyed",
+      "A method that returns a value",
+      "A type of variable"
+    ],
+    "answer": "A special method used to clean up resources before an object is destroyed"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What does 'static' keyword do in OOP?",
+    "options": [
+      "Makes a member belong to the class itself, not to instances",
+      "Makes a member private",
+      "Makes a member protected",
+      "Makes a member public"
+    ],
+    "answer": "Makes a member belong to the class itself, not to instances"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is the principle of 'Don't Repeat Yourself' (DRY) in OOP?",
+    "options": [
+      "Avoid code duplication",
+      "Use inheritance effectively",
+      "Encapsulate data properly",
+      "Write efficient algorithms"
+    ],
+    "answer": "Avoid code duplication"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "Which design pattern promotes loose coupling between objects?",
+    "options": [
+      "Singleton",
+      "Factory",
+      "Observer",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is the purpose of a getter method?",
+    "options": [
+      "To modify a private member variable",
+      "To return the value of a private member variable",
+      "To create a new object",
+      "To delete an object"
+    ],
+    "answer": "To return the value of a private member variable"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "medium",
+    "question": "What is the purpose of a setter method?",
+    "options": [
+      "To return the value of a private member variable",
+      "To modify a private member variable",
+      "To create a new object",
+      "To delete an object"
+    ],
+    "answer": "To modify a private member variable"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "What design pattern is best suited for managing a collection of objects that can be iterated over, without exposing the underlying data structure?",
+    "options": [
+      "Singleton",
+      "Factory",
+      "Iterator",
+      "Observer"
+    ],
+    "answer": "Iterator"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a benefit of using polymorphism?",
+    "options": [
+      "Increased code reusability",
+      "Improved code maintainability",
+      "Reduced code complexity",
+      "Increased code compilation time"
+    ],
+    "answer": "Increased code compilation time"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "Explain the concept of the Liskov Substitution Principle (LSP).",
+    "options": [
+      "Subtypes should be substitutable for their base types without altering the correctness of the program.",
+      "Classes should have only one reason to change.",
+      "Depend upon abstractions, not concretions.",
+      "Favor composition over inheritance."
+    ],
+    "answer": "Subtypes should be substitutable for their base types without altering the correctness of the program."
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "What is the primary purpose of the Strategy pattern?",
+    "options": [
+      "Encapsulating a family of algorithms and making them interchangeable.",
+      "Defining a family of algorithms, encapsulating each one, and making them interchangeable.",
+      "Providing a way to access the elements of an aggregate object sequentially without exposing its underlying representation.",
+      "Defining a one-to-many relationship between objects."
+    ],
+    "answer": "Defining a family of algorithms, encapsulating each one, and making them interchangeable."
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "In the context of object-oriented design, what does the term 'coupling' refer to?",
+    "options": [
+      "The degree of independence between classes or modules.",
+      "The degree of dependence between classes or modules.",
+      "The process of combining different modules into a single unit.",
+      "The process of separating concerns within a module."
+    ],
+    "answer": "The degree of dependence between classes or modules."
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "What is the difference between composition and aggregation?",
+    "options": [
+      "Composition implies a 'has-a' relationship, while aggregation implies a 'part-of' relationship.",
+      "Composition implies a 'part-of' relationship, while aggregation implies a 'has-a' relationship.",
+      "There is no difference between composition and aggregation.",
+      "Composition is a type of aggregation."
+    ],
+    "answer": "Composition implies a 'part-of' relationship, while aggregation implies a 'has-a' relationship."
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "Which design principle emphasizes minimizing dependencies between modules?",
+    "options": [
+      "Open/Closed Principle",
+      "Liskov Substitution Principle",
+      "Interface Segregation Principle",
+      "Dependency Inversion Principle"
+    ],
+    "answer": "Dependency Inversion Principle"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "What is the primary benefit of using abstract classes?",
+    "options": [
+      "Enforcing a specific implementation for derived classes.",
+      "Providing a common interface for a set of related classes.",
+      "Hiding implementation details from the client.",
+      "Creating immutable objects."
+    ],
+    "answer": "Providing a common interface for a set of related classes."
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "What design pattern is best suited for creating objects without specifying their concrete classes?",
+    "options": [
+      "Singleton",
+      "Factory",
+      "Observer",
+      "Adapter"
+    ],
+    "answer": "Factory"
+  },
+  {
+    "subject": "OOP",
+    "difficulty": "hard",
+    "question": "How does the Decorator pattern differ from the Strategy pattern?",
+    "options": [
+      "Decorator adds responsibilities to objects dynamically, while Strategy defines a family of algorithms.",
+      "Both patterns are essentially the same.",
+      "Decorator is a structural pattern, while Strategy is a behavioral pattern.",
+      "Decorator uses inheritance, while Strategy uses composition."
+    ],
+    "answer": "Decorator adds responsibilities to objects dynamically, while Strategy defines a family of algorithms."
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What does OS stand for?",
+    "options": [
+      "Operating System",
+      "Output System",
+      "Optical Sensor",
+      "Order System"
+    ],
+    "answer": "Operating System"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "Which of the following is NOT a common operating system?",
+    "options": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Microsoft Excel"
+    ],
+    "answer": "Microsoft Excel"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is the primary function of an operating system?",
+    "options": [
+      "Running applications",
+      "Managing hardware and software resources",
+      "Storing data",
+      "Printing documents"
+    ],
+    "answer": "Managing hardware and software resources"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a process?",
+    "options": [
+      "A running program",
+      "A file on the hard drive",
+      "A type of hardware",
+      "A network connection"
+    ],
+    "answer": "A running program"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a thread?",
+    "options": [
+      "A sequence of instructions within a process",
+      "A type of file",
+      "A network protocol",
+      "A hardware component"
+    ],
+    "answer": "A sequence of instructions within a process"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is the kernel of an operating system?",
+    "options": [
+      "The core of the OS",
+      "A type of file system",
+      "A user interface",
+      "A network driver"
+    ],
+    "answer": "The core of the OS"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What does GUI stand for?",
+    "options": [
+      "Graphical User Interface",
+      "Graphic User Interaction",
+      "General Utility Interface",
+      "Global User Input"
+    ],
+    "answer": "Graphical User Interface"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a file system?",
+    "options": [
+      "A method for organizing files on a storage device",
+      "A type of network protocol",
+      "A programming language",
+      "A hardware component"
+    ],
+    "answer": "A method for organizing files on a storage device"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is multitasking?",
+    "options": [
+      "Running multiple programs concurrently",
+      "Running a single program very quickly",
+      "Printing multiple documents at once",
+      "Storing multiple files in one folder"
+    ],
+    "answer": "Running multiple programs concurrently"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a shell?",
+    "options": [
+      "A command-line interpreter",
+      "A type of virus",
+      "A graphical user interface",
+      "A hardware component"
+    ],
+    "answer": "A command-line interpreter"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a driver?",
+    "options": [
+      "Software that allows the OS to communicate with hardware",
+      "A type of file",
+      "A programming language",
+      "A user interface"
+    ],
+    "answer": "Software that allows the OS to communicate with hardware"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is an interrupt?",
+    "options": [
+      "A signal that temporarily stops the CPU's current task",
+      "A type of error message",
+      "A programming language feature",
+      "A hardware component"
+    ],
+    "answer": "A signal that temporarily stops the CPU's current task"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is memory management?",
+    "options": [
+      "The process of allocating and deallocating memory",
+      "The process of storing data on a hard drive",
+      "The process of running programs",
+      "The process of printing documents"
+    ],
+    "answer": "The process of allocating and deallocating memory"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a virtual machine?",
+    "options": [
+      "A software emulation of a physical computer",
+      "A type of file system",
+      "A programming language",
+      "A hardware component"
+    ],
+    "answer": "A software emulation of a physical computer"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is booting?",
+    "options": [
+      "The process of starting a computer",
+      "The process of shutting down a computer",
+      "The process of installing software",
+      "The process of deleting files"
+    ],
+    "answer": "The process of starting a computer"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a deadlock?",
+    "options": [
+      "A situation where two or more processes are blocked indefinitely",
+      "A type of error message",
+      "A programming language feature",
+      "A hardware component"
+    ],
+    "answer": "A situation where two or more processes are blocked indefinitely"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a real-time operating system (RTOS)?",
+    "options": [
+      "An OS designed for time-critical applications",
+      "An OS for general-purpose computers",
+      "An OS for mobile devices",
+      "An OS for servers"
+    ],
+    "answer": "An OS designed for time-critical applications"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a batch operating system?",
+    "options": [
+      "An OS that processes jobs in batches",
+      "An OS with a graphical user interface",
+      "An OS for mobile devices",
+      "An OS for servers"
+    ],
+    "answer": "An OS that processes jobs in batches"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is time-sharing?",
+    "options": [
+      "Allowing multiple users to share a computer simultaneously",
+      "Running a single program very quickly",
+      "Storing multiple files in one folder",
+      "Printing multiple documents at once"
+    ],
+    "answer": "Allowing multiple users to share a computer simultaneously"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is a scheduler?",
+    "options": [
+      "A part of the OS that manages processes",
+      "A type of file",
+      "A programming language",
+      "A hardware component"
+    ],
+    "answer": "A part of the OS that manages processes"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is swapping?",
+    "options": [
+      "Moving processes between main memory and secondary storage",
+      "Running multiple programs concurrently",
+      "Storing multiple files in one folder",
+      "Printing multiple documents at once"
+    ],
+    "answer": "Moving processes between main memory and secondary storage"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is paging?",
+    "options": [
+      "Dividing memory into fixed-size blocks",
+      "Running multiple programs concurrently",
+      "Storing multiple files in one folder",
+      "Printing multiple documents at once"
+    ],
+    "answer": "Dividing memory into fixed-size blocks"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is segmentation?",
+    "options": [
+      "Dividing memory into variable-size blocks",
+      "Running multiple programs concurrently",
+      "Storing multiple files in one folder",
+      "Printing multiple documents at once"
+    ],
+    "answer": "Dividing memory into variable-size blocks"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "easy",
+    "question": "What is the purpose of a command interpreter?",
+    "options": [
+      "To execute commands entered by the user",
+      "To manage files on a storage device",
+      "To control hardware resources",
+      "To run applications"
+    ],
+    "answer": "To execute commands entered by the user"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is the purpose of a page table in virtual memory management?",
+    "options": [
+      "To translate logical addresses to physical addresses",
+      "To manage file system metadata",
+      "To schedule processes on the CPU",
+      "To handle interrupt requests"
+    ],
+    "answer": "To translate logical addresses to physical addresses"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "Which scheduling algorithm is known for its fairness in providing equal CPU time to all processes?",
+    "options": [
+      "First-Come, First-Served (FCFS)",
+      "Shortest Job First (SJF)",
+      "Round Robin",
+      "Priority Scheduling"
+    ],
+    "answer": "Round Robin"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What does a deadlock in an operating system represent?",
+    "options": [
+      "A situation where two or more processes are blocked indefinitely, waiting for each other",
+      "A race condition between two threads",
+      "A segmentation fault",
+      "A memory leak"
+    ],
+    "answer": "A situation where two or more processes are blocked indefinitely, waiting for each other"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is the role of a device driver?",
+    "options": [
+      "To manage user accounts",
+      "To provide an interface between the operating system and hardware devices",
+      "To schedule processes",
+      "To handle network communication"
+    ],
+    "answer": "To provide an interface between the operating system and hardware devices"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "Which file system is commonly used in Linux systems?",
+    "options": [
+      "NTFS",
+      "FAT32",
+      "ext4",
+      "HFS+"
+    ],
+    "answer": "ext4"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is a context switch?",
+    "options": [
+      "Switching between different applications",
+      "Saving and restoring the state of a process",
+      "Allocating memory to a process",
+      "Executing a system call"
+    ],
+    "answer": "Saving and restoring the state of a process"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is the purpose of a semaphore?",
+    "options": [
+      "To manage shared resources between processes",
+      "To handle interrupts",
+      "To schedule processes",
+      "To manage file system access"
+    ],
+    "answer": "To manage shared resources between processes"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is thrashing in virtual memory?",
+    "options": [
+      "Excessive paging or swapping",
+      "A memory leak",
+      "A deadlock",
+      "A race condition"
+    ],
+    "answer": "Excessive paging or swapping"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is a process control block (PCB)?",
+    "options": [
+      "A data structure containing information about a process",
+      "A type of memory allocation",
+      "A scheduling algorithm",
+      "A system call"
+    ],
+    "answer": "A data structure containing information about a process"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is the difference between preemptive and non-preemptive scheduling?",
+    "options": [
+      "Preemptive allows a process to be interrupted, while non-preemptive does not",
+      "Preemptive is faster, non-preemptive is more efficient",
+      "Preemptive uses less memory, non-preemptive uses more",
+      "Preemptive is for batch processing, non-preemptive is for interactive"
+    ],
+    "answer": "Preemptive allows a process to be interrupted, while non-preemptive does not"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is a kernel?",
+    "options": [
+      "The core of the operating system",
+      "A type of memory",
+      "A user-level program",
+      "A device driver"
+    ],
+    "answer": "The core of the operating system"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is the purpose of an interrupt?",
+    "options": [
+      "To signal the CPU about an event",
+      "To manage memory allocation",
+      "To schedule processes",
+      "To handle file system operations"
+    ],
+    "answer": "To signal the CPU about an event"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is a system call?",
+    "options": [
+      "A request from an application to the operating system",
+      "A type of error",
+      "A hardware instruction",
+      "A user-defined function"
+    ],
+    "answer": "A request from an application to the operating system"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "Which memory allocation technique reduces external fragmentation?",
+    "options": [
+      "First-fit",
+      "Best-fit",
+      "Worst-fit",
+      "Compaction"
+    ],
+    "answer": "Compaction"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "medium",
+    "question": "What is a race condition?",
+    "options": [
+      "A situation where the outcome of a program depends on the unpredictable order of execution of processes",
+      "A deadlock situation",
+      "A segmentation fault",
+      "A memory leak"
+    ],
+    "answer": "A situation where the outcome of a program depends on the unpredictable order of execution of processes"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "Which scheduling algorithm is most susceptible to the convoy effect?",
+    "options": [
+      "Shortest Job First",
+      "Round Robin",
+      "Priority Scheduling",
+      "First-Come, First-Served"
+    ],
+    "answer": "First-Come, First-Served"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "What is the primary advantage of a multi-level feedback queue scheduling algorithm?",
+    "options": [
+      "Guaranteed response time for all processes",
+      "Minimizing average waiting time",
+      "Preventing starvation",
+      "Adapting to varying process characteristics"
+    ],
+    "answer": "Adapting to varying process characteristics"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "In a deadlock situation, which condition ensures that a process holding resources is waiting to acquire additional resources held by other processes?",
+    "options": [
+      "Mutual Exclusion",
+      "Hold and Wait",
+      "No Preemption",
+      "Circular Wait"
+    ],
+    "answer": "Hold and Wait"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "Which memory management technique is most effective in minimizing external fragmentation?",
+    "options": [
+      "Paging",
+      "Segmentation",
+      "Swapping",
+      "Best-fit allocation"
+    ],
+    "answer": "Paging"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "What is the purpose of a page table in virtual memory management?",
+    "options": [
+      "To map virtual addresses to physical addresses",
+      "To manage the TLB (Translation Lookaside Buffer)",
+      "To allocate contiguous memory blocks",
+      "To implement demand paging"
+    ],
+    "answer": "To map virtual addresses to physical addresses"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "Which I/O scheduling algorithm is best suited for minimizing seek time on a hard disk?",
+    "options": [
+      "FCFS",
+      "SSTF",
+      "SCAN",
+      "C-SCAN"
+    ],
+    "answer": "SSTF"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "What is a race condition in the context of operating systems?",
+    "options": [
+      "A situation where multiple processes access shared resources concurrently",
+      "A deadlock involving multiple threads",
+      "An error in the memory management unit",
+      "A failure in the file system"
+    ],
+    "answer": "A situation where multiple processes access shared resources concurrently"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "How does a kernel handle a system call?",
+    "options": [
+      "It directly executes the requested operation",
+      "It traps to the kernel mode and executes the appropriate system call handler",
+      "It delegates the request to a user-level process",
+      "It ignores the system call if it's not authorized"
+    ],
+    "answer": "It traps to the kernel mode and executes the appropriate system call handler"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "What is the primary function of a device driver?",
+    "options": [
+      "To manage user input",
+      "To translate system calls into hardware instructions",
+      "To provide an interface between the operating system and hardware devices",
+      "To handle interrupts from the CPU"
+    ],
+    "answer": "To provide an interface between the operating system and hardware devices"
+  },
+  {
+    "subject": "OS",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a characteristic of a real-time operating system (RTOS)?",
+    "options": [
+      "Predictable response time",
+      "Deterministic behavior",
+      "High throughput",
+      "Minimal latency"
+    ],
+    "answer": "High throughput"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What does DBMS stand for?",
+    "options": [
+      "Data Base Management System",
+      "Data Backup Management System",
+      "Database Management Software",
+      "Digital Backup Management System"
+    ],
+    "answer": "Data Base Management System"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "Which of the following is NOT a type of database?",
+    "options": [
+      "Relational",
+      "NoSQL",
+      "Hierarchical",
+      "Sequential Access"
+    ],
+    "answer": "Sequential Access"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "A table in a relational database is also known as a:",
+    "options": [
+      "Relation",
+      "Tuple",
+      "Attribute",
+      "Domain"
+    ],
+    "answer": "Relation"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a primary key?",
+    "options": [
+      "A unique identifier for each record",
+      "A field that can contain null values",
+      "A field that is not unique",
+      "A field that is used for sorting"
+    ],
+    "answer": "A unique identifier for each record"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What does SQL stand for?",
+    "options": [
+      "Structured Query Language",
+      "Statistical Query Language",
+      "Simple Query Language",
+      "Standard Query Language"
+    ],
+    "answer": "Structured Query Language"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "Which SQL command is used to retrieve data from a database?",
+    "options": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": "SELECT"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "Which SQL command is used to add new data to a database?",
+    "options": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": "INSERT"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "Which SQL command is used to modify existing data in a database?",
+    "options": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": "UPDATE"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "Which SQL command is used to delete data from a database?",
+    "options": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": "DELETE"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "A row in a relational database is also known as a:",
+    "options": [
+      "Relation",
+      "Tuple",
+      "Attribute",
+      "Domain"
+    ],
+    "answer": "Tuple"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "A column in a relational database is also known as a:",
+    "options": [
+      "Relation",
+      "Tuple",
+      "Attribute",
+      "Domain"
+    ],
+    "answer": "Attribute"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a foreign key?",
+    "options": [
+      "A field that references a primary key in another table",
+      "A field that is unique",
+      "A field that can contain null values",
+      "A field that is used for sorting"
+    ],
+    "answer": "A field that references a primary key in another table"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What does normalization do?",
+    "options": [
+      "Reduces data redundancy",
+      "Increases data redundancy",
+      "Improves data security",
+      "Slows down database performance"
+    ],
+    "answer": "Reduces data redundancy"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a database schema?",
+    "options": [
+      "A logical structure of a database",
+      "A physical structure of a database",
+      "A set of queries",
+      "A set of transactions"
+    ],
+    "answer": "A logical structure of a database"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a transaction?",
+    "options": [
+      "A sequence of database operations",
+      "A single database operation",
+      "A database query",
+      "A database schema"
+    ],
+    "answer": "A sequence of database operations"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is ACID properties in database transactions?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Accuracy, Consistency, Integrity, Durability",
+      "Atomicity, Consistency, Integrity, Dependency",
+      "Accuracy, Correctness, Integrity, Dependency"
+    ],
+    "answer": "Atomicity, Consistency, Isolation, Durability"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is data integrity?",
+    "options": [
+      "Accuracy and consistency of data",
+      "Security of data",
+      "Accessibility of data",
+      "Backup of data"
+    ],
+    "answer": "Accuracy and consistency of data"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a database index?",
+    "options": [
+      "A data structure that improves the speed of data retrieval",
+      "A data structure that improves data security",
+      "A data structure that improves data storage",
+      "A data structure that improves data backup"
+    ],
+    "answer": "A data structure that improves the speed of data retrieval"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a view in a database?",
+    "options": [
+      "A stored query",
+      "A temporary table",
+      "A physical table",
+      "A database index"
+    ],
+    "answer": "A stored query"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a data warehouse?",
+    "options": [
+      "A central repository of integrated data from multiple sources",
+      "A database management system",
+      "A data mining technique",
+      "A data visualization tool"
+    ],
+    "answer": "A central repository of integrated data from multiple sources"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is OLTP?",
+    "options": [
+      "Online Transaction Processing",
+      "Offline Transaction Processing",
+      "Online Transaction Programming",
+      "Offline Transaction Programming"
+    ],
+    "answer": "Online Transaction Processing"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is OLAP?",
+    "options": [
+      "Online Analytical Processing",
+      "Offline Analytical Processing",
+      "Online Analytical Programming",
+      "Offline Analytical Programming"
+    ],
+    "answer": "Online Analytical Processing"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "Which type of database is best suited for handling large amounts of unstructured data?",
+    "options": [
+      "Relational Database",
+      "NoSQL Database",
+      "Hierarchical Database",
+      "Network Database"
+    ],
+    "answer": "NoSQL Database"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "easy",
+    "question": "What is a constraint in a database?",
+    "options": [
+      "A rule that restricts the type of data that can be stored in a column",
+      "A rule that restricts the number of rows in a table",
+      "A rule that restricts the number of columns in a table",
+      "A rule that restricts the access to the database"
+    ],
+    "answer": "A rule that restricts the type of data that can be stored in a column"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is the purpose of a database index?",
+    "options": [
+      "To store the entire database table",
+      "To speed up data retrieval",
+      "To encrypt database data",
+      "To prevent data modification"
+    ],
+    "answer": "To speed up data retrieval"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What does ACID stand for in the context of database transactions?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Accuracy, Consistency, Integrity, Dependability",
+      "Atomicity, Coherence, Integrity, Durability",
+      "Accuracy, Coherence, Isolation, Dependability"
+    ],
+    "answer": "Atomicity, Consistency, Isolation, Durability"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is a foreign key?",
+    "options": [
+      "A primary key in a different table",
+      "A unique identifier for each row in a table",
+      "A field that creates a relationship between tables",
+      "A field that cannot be NULL"
+    ],
+    "answer": "A field that creates a relationship between tables"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is a deadlock in a database?",
+    "options": [
+      "A situation where two or more transactions are blocked indefinitely",
+      "A corrupted database file",
+      "A failed transaction",
+      "A slow database query"
+    ],
+    "answer": "A situation where two or more transactions are blocked indefinitely"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is the purpose of a view in a database?",
+    "options": [
+      "To store temporary data",
+      "To provide a customized subset of data",
+      "To encrypt database data",
+      "To speed up data insertion"
+    ],
+    "answer": "To provide a customized subset of data"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "Which SQL command is used to modify data in a table?",
+    "options": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": "UPDATE"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What does SQL stand for?",
+    "options": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "Statistical Query Language",
+      "Standard Query Language"
+    ],
+    "answer": "Structured Query Language"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is a primary key constraint?",
+    "options": [
+      "Ensures data uniqueness",
+      "Ensures data integrity",
+      "Ensures data consistency",
+      "Ensures data availability"
+    ],
+    "answer": "Ensures data uniqueness"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "Which type of join combines rows from two tables based on a related column?",
+    "options": [
+      "UNION",
+      "INTERSECT",
+      "JOIN",
+      "EXCEPT"
+    ],
+    "answer": "JOIN"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is a transaction log used for?",
+    "options": [
+      "Storing user login information",
+      "Tracking database changes",
+      "Storing database queries",
+      "Storing database backups"
+    ],
+    "answer": "Tracking database changes"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is the role of a database administrator (DBA)?",
+    "options": [
+      "To develop database applications",
+      "To design, implement, and maintain databases",
+      "To use database applications",
+      "To back up user data"
+    ],
+    "answer": "To design, implement, and maintain databases"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is a trigger in a database?",
+    "options": [
+      "A stored procedure that automatically executes in response to certain events",
+      "A type of database index",
+      "A security mechanism",
+      "A type of database backup"
+    ],
+    "answer": "A stored procedure that automatically executes in response to certain events"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "Which SQL statement is used to retrieve data from a database?",
+    "options": [
+      "UPDATE",
+      "DELETE",
+      "INSERT",
+      "SELECT"
+    ],
+    "answer": "SELECT"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "medium",
+    "question": "What is data integrity?",
+    "options": [
+      "The accuracy and consistency of data",
+      "The security of data",
+      "The availability of data",
+      "The backup of data"
+    ],
+    "answer": "The accuracy and consistency of data"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "Which of the following concurrency control protocols is most likely to lead to cascading rollbacks?",
+    "options": [
+      "Strict 2PL",
+      "Optimistic Concurrency Control",
+      "Timestamp Ordering",
+      "Multi-version Concurrency Control"
+    ],
+    "answer": "Strict 2PL"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "What is the primary advantage of using a materialized view instead of a regular view?",
+    "options": [
+      "Improved query performance",
+      "Reduced storage space",
+      "Enhanced data security",
+      "Simplified data updates"
+    ],
+    "answer": "Improved query performance"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "In distributed database systems, what is the main challenge posed by the 'two-phase commit' protocol?",
+    "options": [
+      "Network latency",
+      "Data inconsistency",
+      "Deadlocks",
+      "Concurrency control"
+    ],
+    "answer": "Network latency"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "Which indexing technique is most suitable for range queries on non-uniformly distributed data?",
+    "options": [
+      "B+ tree",
+      "Hashing",
+      "ISAM",
+      "Inverted index"
+    ],
+    "answer": "B+ tree"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "How does query optimization improve database performance?",
+    "options": [
+      "Reduces the amount of data accessed",
+      "Simplifies the query syntax",
+      "Increases the size of the database",
+      "Improves data security"
+    ],
+    "answer": "Reduces the amount of data accessed"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "What is the purpose of a database trigger?",
+    "options": [
+      "To enforce referential integrity",
+      "To automatically execute actions based on certain events",
+      "To improve query performance",
+      "To secure the database from unauthorized access"
+    ],
+    "answer": "To automatically execute actions based on certain events"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "What is a major drawback of using NoSQL databases?",
+    "options": [
+      "Scalability issues",
+      "Lack of ACID properties",
+      "High cost",
+      "Limited data types"
+    ],
+    "answer": "Lack of ACID properties"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "Which database normalization form eliminates transitive dependency?",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "answer": "3NF"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "What is the role of a database administrator (DBA)?",
+    "options": [
+      "Designing, implementing, and maintaining databases",
+      "Developing database applications",
+      "Ensuring data security and integrity",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "subject": "DBMS",
+    "difficulty": "hard",
+    "question": "Explain the concept of fragmentation in distributed databases.",
+    "options": [
+      "Dividing a database into smaller, independent parts",
+      "Replicating data across multiple sites",
+      "Using multiple database systems",
+      "Encrypting sensitive data"
+    ],
+    "answer": "Dividing a database into smaller, independent parts"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What does TCP stand for?",
+    "options": [
+      "Transmission Control Protocol",
+      "Transfer Control Protocol",
+      "Transmission Command Protocol",
+      "Transfer Command Protocol"
+    ],
+    "answer": "Transmission Control Protocol"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What does IP stand for?",
+    "options": [
+      "Internet Protocol",
+      "Internet Procedure",
+      "Intra-network Protocol",
+      "Inter-network Process"
+    ],
+    "answer": "Internet Protocol"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "Which layer of the OSI model is responsible for routing?",
+    "options": [
+      "Network Layer",
+      "Transport Layer",
+      "Data Link Layer",
+      "Physical Layer"
+    ],
+    "answer": "Network Layer"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "Which layer of the OSI model deals with physical cabling?",
+    "options": [
+      "Physical Layer",
+      "Data Link Layer",
+      "Network Layer",
+      "Transport Layer"
+    ],
+    "answer": "Physical Layer"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is the purpose of a MAC address?",
+    "options": [
+      "To uniquely identify a device on a network",
+      "To route packets between networks",
+      "To control network traffic",
+      "To encrypt network data"
+    ],
+    "answer": "To uniquely identify a device on a network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is an IP address?",
+    "options": [
+      "A unique numerical label assigned to each device on a network",
+      "A name assigned to a network device",
+      "A type of network cable",
+      "A network protocol"
+    ],
+    "answer": "A unique numerical label assigned to each device on a network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is a subnet mask used for?",
+    "options": [
+      "To divide a network into smaller subnetworks",
+      "To encrypt network traffic",
+      "To control network access",
+      "To identify network devices"
+    ],
+    "answer": "To divide a network into smaller subnetworks"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is DNS?",
+    "options": [
+      "Domain Name System",
+      "Data Network System",
+      "Digital Network Service",
+      "Domain Network Service"
+    ],
+    "answer": "Domain Name System"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What protocol is used for web browsing?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "POP3"
+    ],
+    "answer": "HTTP"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is the purpose of a router?",
+    "options": [
+      "To forward data packets between networks",
+      "To connect devices to a network",
+      "To manage network security",
+      "To encrypt network data"
+    ],
+    "answer": "To forward data packets between networks"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is a switch?",
+    "options": [
+      "A device that connects devices on a LAN",
+      "A device that connects networks",
+      "A device that manages network security",
+      "A type of network cable"
+    ],
+    "answer": "A device that connects devices on a LAN"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What does UDP stand for?",
+    "options": [
+      "User Datagram Protocol",
+      "Universal Datagram Protocol",
+      "User Data Protocol",
+      "Universal Data Protocol"
+    ],
+    "answer": "User Datagram Protocol"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "Which protocol is connectionless?",
+    "options": [
+      "UDP",
+      "TCP",
+      "HTTP",
+      "FTP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "Which protocol is connection-oriented?",
+    "options": [
+      "TCP",
+      "UDP",
+      "HTTP",
+      "FTP"
+    ],
+    "answer": "TCP"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is a gateway?",
+    "options": [
+      "A device that connects different types of networks",
+      "A device that connects devices on a LAN",
+      "A device that manages network security",
+      "A type of network cable"
+    ],
+    "answer": "A device that connects different types of networks"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is a packet?",
+    "options": [
+      "A unit of data transmitted over a network",
+      "A type of network cable",
+      "A network device",
+      "A network protocol"
+    ],
+    "answer": "A unit of data transmitted over a network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is bandwidth?",
+    "options": [
+      "The amount of data that can be transmitted over a network in a given time",
+      "The speed of a network connection",
+      "The capacity of a network",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is latency?",
+    "options": [
+      "The delay in transmitting data over a network",
+      "The loss of data during transmission",
+      "The speed of a network connection",
+      "The capacity of a network"
+    ],
+    "answer": "The delay in transmitting data over a network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is a firewall?",
+    "options": [
+      "A system designed to prevent unauthorized access to a network",
+      "A type of network cable",
+      "A network device",
+      "A network protocol"
+    ],
+    "answer": "A system designed to prevent unauthorized access to a network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What does LAN stand for?",
+    "options": [
+      "Local Area Network",
+      "Large Area Network",
+      "Long Area Network",
+      "Local Access Network"
+    ],
+    "answer": "Local Area Network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What does WAN stand for?",
+    "options": [
+      "Wide Area Network",
+      "Wireless Area Network",
+      "Wired Area Network",
+      "Wide Access Network"
+    ],
+    "answer": "Wide Area Network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is a modem?",
+    "options": [
+      "A device that modulates and demodulates signals",
+      "A type of network cable",
+      "A network device",
+      "A network protocol"
+    ],
+    "answer": "A device that modulates and demodulates signals"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is an example of a physical topology?",
+    "options": [
+      "Bus topology",
+      "Star topology",
+      "Ring topology",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "easy",
+    "question": "What is the purpose of a network adapter?",
+    "options": [
+      "To connect a device to a network",
+      "To manage network security",
+      "To encrypt network data",
+      "To route packets between networks"
+    ],
+    "answer": "To connect a device to a network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "Which layer of the OSI model is responsible for logical addressing?",
+    "options": [
+      "Physical Layer",
+      "Network Layer",
+      "Transport Layer",
+      "Data Link Layer"
+    ],
+    "answer": "Network Layer"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is the purpose of a subnet mask?",
+    "options": [
+      "To encrypt network traffic",
+      "To identify the network portion of an IP address",
+      "To route packets between networks",
+      "To translate domain names to IP addresses"
+    ],
+    "answer": "To identify the network portion of an IP address"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What protocol is used for transferring files between computers?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "DNS"
+    ],
+    "answer": "FTP"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "Which addressing scheme uses a 48-bit address?",
+    "options": [
+      "IPv4",
+      "IPv6",
+      "MAC Address",
+      "IP Address"
+    ],
+    "answer": "MAC Address"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What does TCP stand for?",
+    "options": [
+      "Transmission Control Protocol",
+      "Transmission Command Protocol",
+      "Transfer Control Protocol",
+      "Transfer Command Protocol"
+    ],
+    "answer": "Transmission Control Protocol"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is the role of a router in a network?",
+    "options": [
+      "To connect different networks",
+      "To amplify network signals",
+      "To store network data",
+      "To filter network traffic"
+    ],
+    "answer": "To connect different networks"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is a collision domain?",
+    "options": [
+      "A network segment where collisions can occur",
+      "A network segment with high bandwidth",
+      "A network segment with low latency",
+      "A network segment with multiple routers"
+    ],
+    "answer": "A network segment where collisions can occur"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What does UDP stand for?",
+    "options": [
+      "User Datagram Protocol",
+      "Universal Datagram Protocol",
+      "Unified Datagram Protocol",
+      "Unreliable Datagram Protocol"
+    ],
+    "answer": "User Datagram Protocol"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "Which protocol is connectionless?",
+    "options": [
+      "TCP",
+      "UDP",
+      "FTP",
+      "HTTP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is the purpose of DNS?",
+    "options": [
+      "To encrypt network traffic",
+      "To translate domain names to IP addresses",
+      "To route packets between networks",
+      "To manage network security"
+    ],
+    "answer": "To translate domain names to IP addresses"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is a firewall?",
+    "options": [
+      "A network device that filters network traffic",
+      "A network device that amplifies network signals",
+      "A network device that stores network data",
+      "A network device that translates domain names"
+    ],
+    "answer": "A network device that filters network traffic"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What does DHCP stand for?",
+    "options": [
+      "Dynamic Host Configuration Protocol",
+      "Domain Host Configuration Protocol",
+      "Dynamic Host Control Protocol",
+      "Domain Host Control Protocol"
+    ],
+    "answer": "Dynamic Host Configuration Protocol"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is a VPN?",
+    "options": [
+      "Virtual Private Network",
+      "Virtual Public Network",
+      "Virtual Personal Network",
+      "Virtual Protected Network"
+    ],
+    "answer": "Virtual Private Network"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "Which layer of the OSI model handles error detection and correction?",
+    "options": [
+      "Network Layer",
+      "Data Link Layer",
+      "Transport Layer",
+      "Physical Layer"
+    ],
+    "answer": "Data Link Layer"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "medium",
+    "question": "What is the purpose of a gateway?",
+    "options": [
+      "To connect different network types",
+      "To amplify network signals",
+      "To filter network traffic",
+      "To translate domain names"
+    ],
+    "answer": "To connect different network types"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "Which of the following routing protocols is most suitable for a large, unstable network with frequent topology changes and a high demand for rapid convergence?",
+    "options": [
+      "RIP",
+      "OSPF",
+      "EIGRP",
+      "BGP"
+    ],
+    "answer": "EIGRP"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "Explain the concept of 'QoS' and describe three common techniques used to implement it.",
+    "options": [
+      "Quality of Service; techniques include traffic shaping, prioritization, and resource reservation.",
+      "Quality of Service; techniques include encryption, authentication, and authorization.",
+      "Quantity of Service; techniques include bandwidth allocation, packet filtering, and congestion control.",
+      "Quality of Service; techniques include caching, compression, and load balancing."
+    ],
+    "answer": "Quality of Service; techniques include traffic shaping, prioritization, and resource reservation."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "What is the purpose of a Network Address Translation (NAT) and how does it address the issue of IPv4 address exhaustion?",
+    "options": [
+      "NAT provides network security by encrypting data packets; it doesn't directly address IPv4 exhaustion.",
+      "NAT translates private IP addresses to public IP addresses, conserving public IP addresses.",
+      "NAT assigns unique MAC addresses to devices, preventing IP address conflicts; it indirectly addresses IPv4 exhaustion.",
+      "NAT fragments large packets into smaller ones, improving network efficiency; it doesn't address IPv4 exhaustion."
+    ],
+    "answer": "NAT translates private IP addresses to public IP addresses, conserving public IP addresses."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "Describe the difference between a connectionless and a connection-oriented network service, providing an example of each.",
+    "options": [
+      "Connectionless: UDP (unreliable); Connection-oriented: TCP (reliable)",
+      "Connectionless: TCP (reliable); Connection-oriented: UDP (unreliable)",
+      "Connectionless: HTTP; Connection-oriented: FTP",
+      "Connectionless: FTP; Connection-oriented: HTTP"
+    ],
+    "answer": "Connectionless: UDP (unreliable); Connection-oriented: TCP (reliable)"
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "What are the key security challenges posed by Software Defined Networking (SDN) and how can they be mitigated?",
+    "options": [
+      "Centralized control point vulnerability; mitigation: robust security protocols and access controls.",
+      "Distributed nature of SDN; mitigation: network segmentation and virtualization.",
+      "Lack of standardization; mitigation: improved interoperability and open-source initiatives.",
+      "High latency; mitigation: optimized network topologies and hardware acceleration."
+    ],
+    "answer": "Centralized control point vulnerability; mitigation: robust security protocols and access controls."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "Explain the concept of a 'man-in-the-middle' attack and how it relates to network security.",
+    "options": [
+      "An attacker intercepts and relays communications between two parties, eavesdropping or altering data.",
+      "A denial-of-service attack that floods a network with traffic, disrupting service.",
+      "A type of malware that infects a network and steals data.",
+      "A form of social engineering that tricks users into revealing sensitive information."
+    ],
+    "answer": "An attacker intercepts and relays communications between two parties, eavesdropping or altering data."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "What is the significance of the TCP three-way handshake in establishing a reliable connection?",
+    "options": [
+      "It establishes a synchronized connection by exchanging sequence numbers and acknowledgments.",
+      "It ensures data integrity through checksum verification.",
+      "It prevents congestion by limiting the amount of data sent.",
+      "It authenticates the communicating parties through digital signatures."
+    ],
+    "answer": "It establishes a synchronized connection by exchanging sequence numbers and acknowledgments."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "How does a Content Delivery Network (CDN) improve website performance and user experience?",
+    "options": [
+      "By caching content closer to users, reducing latency and improving load times.",
+      "By encrypting all website traffic, enhancing security.",
+      "By compressing website data, reducing bandwidth consumption.",
+      "By using load balancing to distribute traffic across multiple servers, preventing server overload."
+    ],
+    "answer": "By caching content closer to users, reducing latency and improving load times."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "Describe the function of a firewall in network security and its different types.",
+    "options": [
+      "Controls network traffic based on predefined rules; types include packet filtering, stateful inspection, and application-level gateways.",
+      "Detects and prevents malware infections; types include signature-based, heuristic, and behavioral.",
+      "Encrypts network communications; types include symmetric and asymmetric encryption.",
+      "Authenticates users and controls access to network resources; types include RADIUS and TACACS+."
+    ],
+    "answer": "Controls network traffic based on predefined rules; types include packet filtering, stateful inspection, and application-level gateways."
+  },
+  {
+    "subject": "CN",
+    "difficulty": "hard",
+    "question": "Explain the difference between circuit switching and packet switching in network communication.",
+    "options": [
+      "Circuit switching: dedicated path; Packet switching: data broken into packets.",
+      "Circuit switching: data broken into packets; Packet switching: dedicated path.",
+      "Circuit switching: uses TCP; Packet switching uses UDP.",
+      "Circuit switching: uses UDP; Packet switching uses TCP."
+    ],
+    "answer": "Circuit switching: dedicated path; Packet switching: data broken into packets."
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "Which data structure follows LIFO (Last-In, First-Out) principle?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Linked List",
+      "Tree"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "Which data structure follows FIFO (First-In, First-Out) principle?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Linked List",
+      "Tree"
+    ],
+    "answer": "Queue"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is the time complexity of accessing an element in an array by its index?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a node in a linked list?",
+    "options": [
+      "A single element containing data and a pointer",
+      "A type of tree",
+      "A sorting algorithm",
+      "A graph"
+    ],
+    "answer": "A single element containing data and a pointer"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What does a binary tree consist of?",
+    "options": [
+      "Nodes and edges",
+      "Only nodes",
+      "Only edges",
+      "Vertices and arcs"
+    ],
+    "answer": "Nodes and edges"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is the worst-case time complexity of linear search?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a recursive function?",
+    "options": [
+      "A function that calls itself",
+      "A function that uses loops",
+      "A function that returns a value",
+      "A function that takes no arguments"
+    ],
+    "answer": "A function that calls itself"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "Which data structure is best for implementing a priority queue?",
+    "options": [
+      "Array",
+      "Linked List",
+      "Heap",
+      "Stack"
+    ],
+    "answer": "Heap"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is the average time complexity of insertion sort?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(n^2)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a graph?",
+    "options": [
+      "A collection of nodes and edges",
+      "A type of tree",
+      "A sorting algorithm",
+      "A linear data structure"
+    ],
+    "answer": "A collection of nodes and edges"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a linked list?",
+    "options": [
+      "A linear data structure",
+      "A non-linear data structure",
+      "A type of tree",
+      "A graph"
+    ],
+    "answer": "A linear data structure"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is an algorithm?",
+    "options": [
+      "A step-by-step procedure",
+      "A data structure",
+      "A programming language",
+      "A computer"
+    ],
+    "answer": "A step-by-step procedure"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is the best-case time complexity of binary search?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a hash table?",
+    "options": [
+      "A data structure that uses hashing",
+      "A type of tree",
+      "A sorting algorithm",
+      "A linear data structure"
+    ],
+    "answer": "A data structure that uses hashing"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a binary search tree?",
+    "options": [
+      "A tree where each node has at most two children",
+      "A tree where each node has at most one child",
+      "A tree where each node has at least two children",
+      "A tree where each node has no children"
+    ],
+    "answer": "A tree where each node has at most two children"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is Big O notation used for?",
+    "options": [
+      "Describing the time complexity of an algorithm",
+      "Describing the space complexity of an algorithm",
+      "Both time and space complexity",
+      "None of the above"
+    ],
+    "answer": "Both time and space complexity"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What does a queue use for adding and removing elements?",
+    "options": [
+      "Enqueue and Dequeue",
+      "Push and Pop",
+      "Insert and Delete",
+      "Add and Remove"
+    ],
+    "answer": "Enqueue and Dequeue"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What does a stack use for adding and removing elements?",
+    "options": [
+      "Enqueue and Dequeue",
+      "Push and Pop",
+      "Insert and Delete",
+      "Add and Remove"
+    ],
+    "answer": "Push and Pop"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is the average time complexity of quicksort?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(1)"
+    ],
+    "answer": "O(n log n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a doubly linked list?",
+    "options": [
+      "A linked list where each node points to the next and previous node",
+      "A linked list where each node points only to the next node",
+      "A linked list where each node points only to the previous node",
+      "A circular linked list"
+    ],
+    "answer": "A linked list where each node points to the next and previous node"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is a circular linked list?",
+    "options": [
+      "A linked list where the last node points to the first node",
+      "A linked list where the first node points to the last node",
+      "A doubly linked list",
+      "A singly linked list"
+    ],
+    "answer": "A linked list where the last node points to the first node"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "What is the space complexity of an array of size n?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "Which sorting algorithm has a time complexity of O(n^2) in all cases?",
+    "options": [
+      "Merge Sort",
+      "Quick Sort",
+      "Bubble Sort",
+      "Heap Sort"
+    ],
+    "answer": "Bubble Sort"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a basic graph traversal algorithm?",
+    "options": [
+      "Breadth-First Search (BFS)",
+      "Depth-First Search (DFS)",
+      "Binary Search",
+      "None of the above"
+    ],
+    "answer": "Binary Search"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is the time complexity of searching for an element in a balanced binary search tree?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "Which data structure uses LIFO (Last-In, First-Out) principle?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Linked List",
+      "Tree"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is the average case time complexity of quicksort?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(n^2)"
+    ],
+    "answer": "O(n log n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "Which data structure is best suited for implementing a breadth-first search algorithm?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Heap",
+      "Linked List"
+    ],
+    "answer": "Queue"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is the space complexity of a recursive function call?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "Depends on the recursion depth"
+    ],
+    "answer": "Depends on the recursion depth"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "A graph with no cycles is called a:",
+    "options": [
+      "Directed Graph",
+      "Undirected Graph",
+      "Acyclic Graph",
+      "Complete Graph"
+    ],
+    "answer": "Acyclic Graph"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "Which sorting algorithm has a worst-case time complexity of O(n^2)?",
+    "options": [
+      "Merge Sort",
+      "Quicksort",
+      "Heapsort",
+      "Bubble Sort"
+    ],
+    "answer": "Bubble Sort"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is a hash table?",
+    "options": [
+      "A sorted array",
+      "A type of linked list",
+      "A data structure that uses a hash function to map keys to values",
+      "A binary search tree"
+    ],
+    "answer": "A data structure that uses a hash function to map keys to values"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is the best-case time complexity for insertion sort?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(log n)",
+      "O(1)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "Which traversal method visits the root node last?",
+    "options": [
+      "Preorder",
+      "Inorder",
+      "Postorder",
+      "Levelorder"
+    ],
+    "answer": "Postorder"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is an adjacency matrix?",
+    "options": [
+      "A way to represent a graph using a matrix",
+      "A type of linked list",
+      "A sorting algorithm",
+      "A data structure for representing trees"
+    ],
+    "answer": "A way to represent a graph using a matrix"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What data structure is used to implement Dijkstra's algorithm?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Priority Queue",
+      "Linked List"
+    ],
+    "answer": "Priority Queue"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What does a heap data structure maintain?",
+    "options": [
+      "Sorted order",
+      "Random order",
+      "Heap property",
+      "Balanced tree structure"
+    ],
+    "answer": "Heap property"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "In a binary tree, a node with no children is called a:",
+    "options": [
+      "Root",
+      "Parent",
+      "Leaf",
+      "Sibling"
+    ],
+    "answer": "Leaf"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "medium",
+    "question": "What is the time complexity of deleting an element from the beginning of a doubly linked list?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "What is the worst-case time complexity for finding the kth smallest element in an unsorted array using QuickSelect?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(k log n)"
+    ],
+    "answer": "O(n^2)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "Which data structure is most efficient for implementing Dijkstra's algorithm on a graph with negative edge weights?",
+    "options": [
+      "Binary Heap",
+      "Fibonacci Heap",
+      "Red-Black Tree",
+      "Trie"
+    ],
+    "answer": "Fibonacci Heap"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "What is the amortized time complexity of performing n operations on a dynamic array that doubles in size when full?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "Which algorithm is best suited for finding the strongly connected components in a directed graph?",
+    "options": [
+      "Breadth-First Search",
+      "Depth-First Search",
+      "Kosaraju's Algorithm",
+      "Bellman-Ford Algorithm"
+    ],
+    "answer": "Kosaraju's Algorithm"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "Given a balanced AVL tree, what is the worst-case time complexity for searching, insertion, and deletion?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "What is the space complexity of a recursive implementation of the Fibonacci sequence?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(2^n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "Which algorithm uses a greedy approach to find a minimum spanning tree?",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra's",
+      "Prim's",
+      "Floyd-Warshall"
+    ],
+    "answer": "Prim's"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "What is the time complexity of finding the longest common subsequence of two strings using dynamic programming?",
+    "options": [
+      "O(m+n)",
+      "O(m*n)",
+      "O(m*log n)",
+      "O(n*log m)"
+    ],
+    "answer": "O(m*n)"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "In a hash table with separate chaining, what is the impact of a high load factor on performance?",
+    "options": [
+      "Improved performance",
+      "No impact on performance",
+      "Increased collision probability and decreased performance",
+      "Increased memory usage only"
+    ],
+    "answer": "Increased collision probability and decreased performance"
+  },
+  {
+    "subject": "DSA",
+    "difficulty": "hard",
+    "question": "Which data structure is best suited for efficiently managing a cache with a Least Recently Used (LRU) replacement policy?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Binary Heap",
+      "Doubly Linked List"
+    ],
+    "answer": "Doubly Linked List"
+  }
+]
