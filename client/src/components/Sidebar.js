@@ -88,21 +88,21 @@ const Sidebar = () => {
           Ranking
         </a>
         
-        <a 
-          href="#" 
-          style={navLinkStyles}
-          onClick={(e) => e.preventDefault()}
+        <Link  
+         to="/study-resources" 
+          style={location.pathname === '/study-resources' ? activeLinkStyles : navLinkStyles}
+          
         >
           Study Resources
-        </a>
+        </Link>
         
-        <a 
-          href="#" 
-          style={navLinkStyles}
-          onClick={(e) => e.preventDefault()}
+        <Link
+         
+          to="/Resume-Builder" 
+          style={location.pathname === '/Resume-Builder' ? activeLinkStyles : navLinkStyles}
         >
           Resume Builder
-        </a>
+        </Link>
       </nav>
       {/* User Profile Section would go here */}
     </aside>
