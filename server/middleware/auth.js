@@ -1,8 +1,14 @@
 const jwt = require('jsonwebtoken');
 
-// This middleware function will be used to protect routes
+/**
+ * @description Middleware to authenticate and authorize a user.
+ * It checks for a JSON Web Token (JWT) in the 'x-auth-token' header.
+ * If the token is valid, it attaches the user's payload to the request object
+ * and passes control to the next middleware function.
+ * If the token is missing or invalid, it sends a 401 Unauthorized response.
+ */
 module.exports = function (req, res, next) {
-  // 1. Get the token from the request header
+  // 1. Get token from the 'x-auth-token' header
   const token = req.header('x-auth-token');
 
   // 2. Check if no token is present
@@ -10,14 +16,18 @@ module.exports = function (req, res, next) {
     return res.status(401).json({ msg: 'No token, authorization denied' });
   }
 
-  // 3. If a token is found, verify it
+  // 3. Verify the token
   try {
+    // Decode the token using your JWT secret
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    
-    // Add the user payload from the token to the request object
+
+    // Attach the decoded user payload to the request object
     req.user = decoded.user;
-    next(); // Proceed to the next function (the route handler)
+
+    // Pass control to the next middleware in the stack (the route handler)
+    next();
   } catch (err) {
+    // If token is not valid (e.g., expired, malformed)
     res.status(401).json({ msg: 'Token is not valid' });
   }
 };
