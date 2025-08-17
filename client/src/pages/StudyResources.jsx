@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Sidebar from "../components/Sidebar"; // ✅ actually use Sidebar
+import Sidebar from "../components/Sidebar";
 
 const StudyResources = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,7 +22,7 @@ const StudyResources = () => {
     "Java",
   ];
 
-  // ✅ GeeksforGeeks links for subjects
+  // ✅ GeeksforGeeks links
   const gfgLinks = {
     HTML: "https://www.geeksforgeeks.org/html-tutorials/",
     CSS: "https://www.geeksforgeeks.org/css-tutorials/",
@@ -43,7 +43,7 @@ const StudyResources = () => {
   // ✅ Fetch YouTube videos
   const fetchVideos = async (topic) => {
     try {
-      const apiKey = "AIzaSyD9qkDA6KbN9CLI3m63spJ49SNozyITouQ"; // 🔑 replace with your YouTube Data API v3 key
+      const apiKey = "AIzaSyD9qkDA6KbN9CLI3m63spJ49SNozyITouQ"; // 🔑 Replace with real key
       const query = `${topic} tutorials`;
       const res = await axios.get(
         `https://www.googleapis.com/youtube/v3/search`,
@@ -63,36 +63,67 @@ const StudyResources = () => {
     }
   };
 
+  // --- Dashboard-like Styles ---
+  const pageContainerStyles = {
+    display: "flex",
+    minHeight: "100vh",
+    backgroundColor: "#F0F4F8",
+    fontFamily:
+      "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+  };
+  const mainContentStyles = {
+    flexGrow: 1,
+    padding: "30px",
+    color: "#2C3E50",
+    height: "100vh",
+    overflowY: "auto",
+  };
+  const cardStyles = {
+    backgroundColor: "#FFFFFF",
+    padding: "20px",
+    borderRadius: "12px",
+    border: "1px solid #E0E0E0",
+    marginBottom: "25px",
+  };
+  const inputStyles = {
+    padding: "12px",
+    borderRadius: "8px",
+    border: "1px solid #E0E0E0",
+    width: "100%",
+    backgroundColor: "#FFFFFF",
+    color: "#2C3E50",
+    fontSize: "1rem",
+  };
+  const buttonStyles = {
+    padding: "10px 18px",
+    borderRadius: "6px",
+    border: "none",
+    backgroundColor: "#4FC3F7",
+    color: "#fff",
+    cursor: "pointer",
+    fontWeight: "500",
+    marginRight: "10px",
+  };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        minHeight: "100vh",
-        backgroundColor: "#0A192F",
-      }}
-    >
-      {/* ✅ Sidebar on the left */}
+    <div style={pageContainerStyles}>
+      {/* Sidebar */}
       <Sidebar />
 
-      {/* ✅ Main content on the right */}
-      <div style={{ flex: 1, padding: "20px", color: "#E6F1FF" }}>
-        <h2 style={{ color: "#64FFDA" }}>📚 Study Resources</h2>
+      {/* Main Content */}
+      <div style={mainContentStyles}>
+        <h2 style={{ color: "#2C3E50", fontSize: "2rem" }}>
+          📚 Study Resources
+        </h2>
 
-        {/* 🔍 Search bar */}
-        <div style={{ position: "relative", marginBottom: "20px" }}>
+        {/* 🔍 Search Section */}
+        <div style={cardStyles}>
           <input
             type="text"
             placeholder="Search a subject..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{
-              padding: "10px",
-              borderRadius: "6px",
-              border: "1px solid #64FFDA",
-              width: "100%",
-              backgroundColor: "#112240",
-              color: "#E6F1FF",
-            }}
+            style={inputStyles}
             onFocus={() => setShowSuggestions(true)}
             onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
           />
@@ -101,29 +132,18 @@ const StudyResources = () => {
           {showSuggestions && (
             <ul
               style={{
-                position: "absolute",
-                top: "45px",
-                left: 0,
-                right: 0,
-                backgroundColor: "#112240",
-                border: "1px solid #64FFDA",
-                borderRadius: "6px",
+                marginTop: "10px",
+                backgroundColor: "#FFFFFF",
+                border: "1px solid #E0E0E0",
+                borderRadius: "8px",
                 maxHeight: "200px",
                 overflowY: "auto",
-                zIndex: 1000,
                 listStyle: "none",
-                margin: 0,
                 padding: 0,
               }}
             >
               {filteredTopics.length === 0 ? (
-                <li
-                  style={{
-                    padding: "10px",
-                    borderBottom: "1px solid #233554",
-                    color: "#8892b0",
-                  }}
-                >
+                <li style={{ padding: "10px", color: "#607D8B" }}>
                   No subject found
                 </li>
               ) : (
@@ -139,12 +159,12 @@ const StudyResources = () => {
                     }}
                     style={{
                       padding: "10px",
-                      borderBottom: "1px solid #233554",
                       cursor: "pointer",
-                      color: "#E6F1FF",
+                      color: "#2C3E50",
+                      borderBottom: "1px solid #E0E0E0",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#233554")
+                      (e.currentTarget.style.backgroundColor = "#F0F4F8")
                     }
                     onMouseLeave={(e) =>
                       (e.currentTarget.style.backgroundColor = "transparent")
@@ -160,45 +180,25 @@ const StudyResources = () => {
 
         {/* ✅ Selected subject */}
         {selectedTopic && (
-          <h3 style={{ color: "#64FFDA", marginBottom: "20px" }}>
-            Selected Subject: {selectedTopic}
-          </h3>
-        )}
-
-        {/* ✅ Resource Type buttons */}
-        {selectedTopic && (
-          <div style={{ marginBottom: "20px" }}>
+          <div style={cardStyles}>
+            <h3 style={{ margin: "0 0 15px 0", color: "#2C3E50" }}>
+              Selected Subject: {selectedTopic}
+            </h3>
             <button
               onClick={() => {
                 setResourceType("Videos");
                 fetchVideos(selectedTopic);
               }}
-              style={{
-                marginRight: "10px",
-                padding: "10px 15px",
-                borderRadius: "6px",
-                border: "none",
-                backgroundColor: "#64FFDA",
-                color: "#0A192F",
-                cursor: "pointer",
-              }}
+              style={buttonStyles}
             >
               🎥 Videos
             </button>
-
             <button
               onClick={() => {
                 setResourceType("Articles");
                 setVideos([]);
               }}
-              style={{
-                padding: "10px 15px",
-                borderRadius: "6px",
-                border: "none",
-                backgroundColor: "#64FFDA",
-                color: "#0A192F",
-                cursor: "pointer",
-              }}
+              style={buttonStyles}
             >
               📖 Articles
             </button>
@@ -207,13 +207,13 @@ const StudyResources = () => {
 
         {/* 🎥 Videos Section */}
         {resourceType === "Videos" && (
-          <div>
-            <h3 style={{ color: "#64FFDA" }}>Videos for {selectedTopic}</h3>
+          <div style={cardStyles}>
+            <h3 style={{ color: "#2C3E50" }}>Videos for {selectedTopic}</h3>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-                gap: "15px",
+                gap: "20px",
                 marginTop: "20px",
               }}
             >
@@ -221,9 +221,10 @@ const StudyResources = () => {
                 <div
                   key={video.id.videoId}
                   style={{
-                    backgroundColor: "#112240",
+                    backgroundColor: "#FFFFFF",
                     padding: "10px",
-                    borderRadius: "6px",
+                    borderRadius: "8px",
+                    border: "1px solid #E0E0E0",
                   }}
                 >
                   <iframe
@@ -234,7 +235,7 @@ const StudyResources = () => {
                     frameBorder="0"
                     allowFullScreen
                   ></iframe>
-                  <p style={{ marginTop: "10px", color: "#E6F1FF" }}>
+                  <p style={{ marginTop: "10px", color: "#2C3E50" }}>
                     {video.snippet.title}
                   </p>
                 </div>
@@ -245,14 +246,14 @@ const StudyResources = () => {
 
         {/* 📖 Articles Section */}
         {resourceType === "Articles" && (
-          <div>
-            <h3 style={{ color: "#64FFDA" }}>Articles for {selectedTopic}</h3>
+          <div style={cardStyles}>
+            <h3 style={{ color: "#2C3E50" }}>Articles for {selectedTopic}</h3>
             <p style={{ marginTop: "10px" }}>
               <a
                 href={gfgLinks[selectedTopic]}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#64FFDA" }}
+                style={{ color: "#4FC3F7", fontWeight: "500" }}
               >
                 Open {selectedTopic} Articles →
               </a>
