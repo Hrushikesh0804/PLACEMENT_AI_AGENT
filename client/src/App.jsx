@@ -25,7 +25,7 @@ function App() {
           {/* Mock Exam Routes */}
           <Route path="/mock-exam" element={<MockExam />} />
           <Route path="/mock-exam/:subjectId" element={<SubjectExams />} />
-          <Route path="/exam/:examId" element={<ExamPage />} />
+          <Route path="/mock-exam/:subjectId/exams/:examId" element={<ExamPage />} />
         </Routes>
       </div>
     </Router>
