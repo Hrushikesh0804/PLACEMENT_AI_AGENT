@@ -9,39 +9,39 @@ const inputStyles = { width: '100%', boxSizing: 'border-box', padding: '12px', m
 const buttonStyles = { width: '100%', padding: '12px', backgroundColor: '#64FFDA', border: 'none', borderRadius: '5px', color: '#0A192F', fontSize: '1rem', fontWeight: 'bold', cursor: 'pointer' };
 
 const LoginPage = () => {
-  const [formData, setFormData] = useState({ email: '', password: '' });
-  const navigate = useNavigate();
+    const [formData, setFormData] = useState({ email: '', password: '' });
+    const navigate = useNavigate();
 
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async e => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:5000/api/users/login', formData);
+    const onSubmit = async e => {
+        e.preventDefault();
+        try {
+            const res = await axios.post('http://localhost:5000/api/auth/login', formData);
 
-      // --- SAVE THE TOKEN ---
-      localStorage.setItem('token', res.data.token);
-      
-      console.log('Login successful');
-      navigate('/dashboard');
-    } catch (err) {
-      console.error('Login error:', err.response.data.msg);
-    }
-  };
+            // --- SAVE THE TOKEN ---
+            localStorage.setItem('token', res.data.token);
+            
+            console.log('Login successful');
+            navigate('/dashboard');
+        } catch (err) {
+            console.error('Login error:', err.response.data.msg);
+        }
+    };
 
-  return (
-    <div style={formContainerStyles}>
-      <form style={formStyles} onSubmit={onSubmit}>
-        <h2 style={{ textAlign: 'center', marginBottom: '30px' }}>Login</h2>
-        <input type="email" name="email" placeholder="Email" style={inputStyles} value={formData.email} onChange={onChange} required />
-        <input type="password" name="password" placeholder="Password" style={inputStyles} value={formData.password} onChange={onChange} required />
-        <button type="submit" style={buttonStyles}>Login</button>
-        <p style={{textAlign: 'center', marginTop: '20px'}}>
-            Don't have an account? <Link to="/signup" style={{color: '#64FFDA'}}>Sign Up</Link>
-        </p>
-      </form>
-    </div>
-  );
+    return (
+        <div style={formContainerStyles}>
+            <form style={formStyles} onSubmit={onSubmit}>
+                <h2 style={{ textAlign: 'center', marginBottom: '30px' }}>Login</h2>
+                <input type="email" name="email" placeholder="Email" style={inputStyles} value={formData.email} onChange={onChange} required />
+                <input type="password" name="password" placeholder="Password" style={inputStyles} value={formData.password} onChange={onChange} required />
+                <button type="submit" style={buttonStyles}>Login</button>
+                <p style={{textAlign: 'center', marginTop: '20px'}}>
+                    Don't have an account? <Link to="/signup" style={{color: '#64FFDA'}}>Sign Up</Link>
+                </p>
+            </form>
+        </div>
+    );
 };
 
 export default LoginPage;

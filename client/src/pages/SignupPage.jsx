@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Import axios to make API calls
 
-// Using the same styles as LoginPage for consistency
+// --- STYLES (can be moved to a CSS file) ---
 const formContainerStyles = {
   display: 'flex',
   justifyContent: 'center',
@@ -53,17 +53,18 @@ const SignupPage = () => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      // Send a POST request to the backend registration endpoint
-      const res = await axios.post('http://localhost:5000/api/users/register', formData);
-      
+      // Corrected: Send POST request to the new consolidated backend endpoint
+      const res = await axios.post('http://localhost:5000/api/auth/register', formData);
+
       console.log('Signup successful, token:', res.data.token);
-      // TODO: Save the token (e.g., in localStorage) for authentication
+      
+      // Save the token in localStorage for authentication
+      localStorage.setItem('token', res.data.token);
       
       navigate('/dashboard'); // Redirect to the dashboard on success
     } catch (err) {
       // Log any errors from the backend
       console.error('Signup error:', err.response.data.msg);
-      // TODO: Display an error message to the user
     }
   };
 
@@ -101,7 +102,7 @@ const SignupPage = () => {
         />
         <button type="submit" style={buttonStyles}>Sign Up</button>
         <p style={{textAlign: 'center', marginTop: '20px'}}>
-            Already have an account? <Link to="/login" style={{color: '#64FFDA'}}>Login</Link>
+          Already have an account? <Link to="/login" style={{color: '#64FFDA'}}>Login</Link>
         </p>
       </form>
     </div>
